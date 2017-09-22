@@ -1,0 +1,87 @@
+/* CSS Document */
+
+.template-faq {
+	
+	.faq-links {
+		@include list-reset;	
+		margin: 30px auto 60px -15px!important;
+		
+		li {
+			display: inline-block;
+			margin: 0 0 0 15px;	
+		}
+	}
+	
+	.accordion {
+		
+		margin-top: 24px;
+		
+		> li {
+			> * {
+				padding: 20px 50px 20px 20px;
+			}
+			
+			> a {
+				display: block;	
+				position: relative;
+				
+				&:after {
+					position: absolute;
+					top: 50%;
+					right: 25px;
+					content: '';
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 10px 12.5px 0 12.5px;
+					border-color: $gray transparent transparent transparent;
+				}
+				
+				* {
+					color: $black;	
+					margin: 0 auto;
+				}
+			}
+			
+			&.is-active > a:after {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 12.5px 10px 12.5px;
+				border-color: transparent transparent $gray transparent;		
+			}
+			
+			&:nth-child(odd) > a {
+				background-color: $light-gray;
+			}
+		}
+		
+		.accordion-content {
+			
+			padding: 20px;
+			
+			div {
+				border-left: 5px solid $light-gray;
+				padding-left: 10px;	
+			}
+			
+			* {
+				font-size: 18px;	
+			}
+			
+			*:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+}
+
+
+.accordion {
+	@include list-reset;	
+	
+	.accordion-content {
+		display: none;	
+	}
+}

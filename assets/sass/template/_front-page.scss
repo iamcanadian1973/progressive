@@ -1,0 +1,217 @@
+//
+// Front Page
+//
+
+.home {
+	
+	.site-header {
+ 		background: rgba($white, .25);	
+	}
+	
+	.hide-menu .nav-primary {
+		visibility: hidden;
+		opacity: 0;
+		transition: none;
+	}
+	
+	.nav-primary {
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 300ms linear 300ms, opacity 300ms;
+	}
+	
+	.site-content {
+		padding: 0;	
+	}
+	
+	
+	
+	.section {
+ 		position: relative;
+		margin: 0;
+		
+		.wrap {
+			padding: 100px 0;		
+		}
+		
+		article {
+			max-width: 700px;	
+		}
+		
+		h1 {
+			margin-bottom: 60px;
+		}
+		
+		h3 {
+			font-weight: 600;
+			margin-bottom: 38px;
+			text-transform: uppercase;
+		}
+		
+		
+		p {
+			font-size: 20px;	
+		}
+		
+		img {
+			
+			display: none;
+			
+			@media #{$large-up} {
+      			display: block;
+				float: right;
+				margin: 0 0 40px 40px;
+			}
+		}
+	}
+	
+	
+	.hero {				
+		.wrap {
+			padding: 0;
+			position: relative;
+			z-index: 2;	
+			height: 100vh;	
+			min-height: inherit;
+			
+			.columns *{
+				text-align: center;	
+				width: 100%;		
+			}
+		}
+		
+		
+		h1 {
+			@extend h2;
+			font-weight: 800;
+			margin-bottom: 20px;
+			color: $white;
+			text-transform: uppercase;
+			strong {
+				font-weight: inherit;
+				color: $yellow;
+			}
+		}
+		
+		h4 {
+			font-weight: normal;
+			color: $white;
+			text-transform: uppercase;
+			strong {
+				font-weight: inherit;
+				color: $yellow;
+			}
+		}
+	}
+	
+	
+	.video-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		pointer-events: none;
+		background-color: $black;
+		opacity: 0.3;
+	}
+	
+}
+
+
+.section:not(#hero) {
+	h1 {
+		margin-bottom: 60px;
+		
+		@media #{$medium-up} {
+			strong {
+				display: block;
+			}
+		}
+	}
+}
+
+
+#mining {
+	
+}
+
+#water-waste-water {
+	background-image: url( assets/images/background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;	
+}
+
+
+#pulp-paper {
+	background-color: #fff;
+	background-image: url( assets/images/gp.png);
+ 	background-repeat: repeat;
+	background-position: left top;		
+}
+
+
+
+.js-off-canvas-overlay {
+	z-index: 9;	
+}
+
+
+
+
+.home .site-header {
+	
+	transition: background 200ms linear;
+	
+	&.mining {
+		background: transparent;
+	}
+	&.water {
+		background: rgba($yellow, .75);	
+	}
+	&.paper {
+		background: rgba($white, .75);	
+		
+		.nav-primary {
+		
+			.menu > .menu-item 	> a {
+				color: $black;
+			}
+			
+			.menu > .current-menu-item 	> a {
+				color: $yellow;
+			}
+			
+		}
+		
+		.menu-toggle {
+			color: $black;
+		
+			&:visited {
+				color: $black;
+			}
+			
+			.hamburger {
+				
+				span {
+					background: $black;
+									
+					&:nth-child(3) {
+					  background: transparent;
+					}
+				}
+			}
+			
+			&[aria-expanded="true"] {
+				.hamburger span {
+					
+					&:nth-child(3) {
+					  background: $black;
+					}
+				}
+			}
+			
+		}
+	}
+}

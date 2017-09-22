@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>dropdown-menu-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Nav-Symbol" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navbar" transform="translate(-1177.000000, -138.000000)" fill="#FFFFFF">
+            <g id="Group-2">
+                <g id="Bottom---Main-Nav" transform="translate(0.000000, 100.000000)">
+                    <g id="Nav-Links" transform="translate(114.000000, 12.000000)">
+                        <g id="expand-more-copy" transform="translate(1067.931185, 31.594077) rotate(-90.000000) translate(-1067.931185, -31.594077) translate(1061.931185, 27.594077)">
+                            <polygon id="dropdown-menu-arrow" points="10.2490066 -2.25597319e-13 5.8013245 4.91139871 1.35364238 -2.25597319e-13 5.68434189e-14 1.49477352 5.8013245 7.90094574 11.602649 1.49477352"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

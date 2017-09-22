@@ -1,0 +1,15 @@
+//
+// Sidebars
+//
+
+.sidebar {
+	
+	.widget {
+
+		ul {
+			@include list-reset;
+		}
+	}
+
+
+}

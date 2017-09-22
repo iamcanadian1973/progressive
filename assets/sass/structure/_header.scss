@@ -1,0 +1,54 @@
+/*
+Header
+---------------------------------------------- */
+
+.body {
+
+	.active-mining {
+		
+	}
+	
+}
+
+.site-header {
+ 	position: fixed;
+	z-index: 99;	
+	width: 100%;
+	
+ 	box-shadow: 0 10px 10px -5px rgba( #999, .5 );
+ 		
+	.wrap {
+		position: relative;	
+		min-height: 55px;
+		padding-top: 21px;
+		padding-bottom: 21px;
+		
+		
+	}
+	
+	.site-branding {
+		width: 160px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 9;
+		
+		img {
+			display: block;
+			max-width: 160px;	
+		}
+		
+		a:hover {
+			opacity: .8;	
+		}	
+	}
+	
+	.site-title {
+		
+				
+	}
+	
+	
+}

@@ -1,0 +1,143 @@
+//--------------------------------------------------------------
+// Navigation
+//--------------------------------------------------------------
+
+
+// Default menu (active after a fresh WordPress install)
+.menu {
+	@include list-reset;
+
+	li {
+		margin: 0 10px 0 0;
+	}
+
+	ul {
+		@include list-reset;
+	}
+
+	
+	&.dropdown {
+	
+		.menu-item {
+			position: relative;
+				
+			&:hover,
+			&:focus,
+			&:active {
+				
+				> .sub-menu {
+					left: 0;
+					opacity: 1;
+					visibility: visible;
+					
+				}
+			}
+						
+		}
+		
+		// Sublevels
+		.sub-menu {
+			position: absolute;
+			z-index: 99;
+			top: 100%;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.2s ease 0.2s;
+			
+			.menu-item a {
+				//padding-left: 15px;	
+			}
+		
+			> .menu-item {
+		
+				> a {
+					position: relative;
+				}
+			}
+	
+		}
+		
+		
+		li:hover > .sub-menu {
+		  opacity: 1;
+		  visibility: visible;
+		  transition: all 0.2s ease 0s;
+		}
+		
+		.menu:hover > .sub-menu {
+ 			opacity: 0;
+		    visibility: hidden;
+			transition: none;	
+		}		
+		
+	}
+	
+ 	
+	// Mega menu
+	&.mega-menu {
+		
+ 		.mega-menu-item { 			
+			position: static;
+			
+		}
+		
+		.mega-menu-wrap {
+		  position: absolute;
+		  z-index: 99;
+		  top: 100%;
+		  left: 0;
+		  transition: all 0.2s ease 0.2s;
+		  opacity: 0;
+		  visibility: hidden;
+		  width: 100%;
+	
+		}
+		
+		li:hover > .mega-menu-wrap {
+		  opacity: 1;
+		  visibility: visible;
+		  transition: all 0.2s ease 0s;
+		}
+		
+		.menu:hover > .mega-menu-wrap {
+ 			opacity: 0;
+		    visibility: hidden;
+			transition: none;	
+		}
+		
+	}
+		
+
+	// Menu hyperlinks
+	a {
+		display: block;
+		text-decoration: none;
+	} // a
+
+	// Current items
+	.current_page_item a,
+	.current-menu-item a {
+	} // .current_page_item a, .current-menu-item a
+} // .menu
+
+
+// Navigation on Comment, Post and Posts
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0;
+		overflow: hidden;
+	} // .site-main &
+
+	&.nav-previous {
+		float: left;
+	} // &.nav-previous
+
+	&.nav-next {
+		float: right;
+		text-align: right;
+	} // &.nav-next
+} // .comment-navigation, .posts-navigation, .post-navigation

@@ -1,0 +1,227 @@
+/* CSS Document */
+
+.template-about {
+
+  .section-our-story {
+
+    strong {
+      color: $blue;
+      font-size: 26px;
+    }
+
+    .grid {
+
+      .thumbnail {
+        margin-bottom: 24px;
+      }
+
+      @media #{$large-up} {
+        .column {
+
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+
+          .entry-content {
+            flex: 1 1 0;
+          }
+
+          .thumbnail {
+            margin-right: 30px;
+            width: 370px;
+          }
+
+          &:nth-child(odd) {
+            flex-direction: row-reverse;
+
+            .thumbnail {
+              margin-left: 30px;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .section-community {
+    background-image: url(assets/images/backgrounds/light-blue.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin-bottom: 0;
+
+    .wrap {
+      padding: 75px 0;
+
+      * {
+        color: $white;
+      }
+    }
+  }
+
+  .section-leadership {
+
+    padding: 75px 0 0;
+    margin-bottom: 0;
+
+    h2 {
+      margin-bottom: 45px;
+    }
+
+    .grid {
+
+      .column {
+        padding-bottom: 60px;
+
+        @media #{$large-up} {
+          padding-bottom: 90px;
+        }
+      }
+    }
+
+    h3 {
+
+      padding-top: 10px;
+      span {
+        color: $light-blue;
+      }
+    }
+
+    .job-title {
+      color: $gray;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .thumbnail {
+      position: relative;
+      max-width: 270px;
+      margin-bottom: 30px;
+
+      @media #{$large-up} {
+        margin-bottom: 0;
+      }
+
+      img {
+        display: block;
+        box-shadow: 0px 5px 5px 5px rgba($light-gray, .3);
+      }
+
+      @media #{$large-up} {
+        width: 200px;
+      }
+
+      @media #{$xxlarge-up} {
+        width: auto;
+      }
+
+      .linkedin {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #2e6db2;
+        z-index: 5;
+
+        span {
+          position: relative;
+          display: block;
+          width: 30px;
+          height: 30px;
+          padding: 5px;
+
+          &:after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-image: url(assets/images/linkedin.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+
+    @media #{$large-up} {
+      .thumbnail {
+        float: left;
+        margin-right: 30px;
+      }
+
+      .entry-content {
+        overflow: hidden;
+      }
+    }
+
+    @media #{$large-up} {
+
+      .grid-wrap {
+        background: linear-gradient(to right, #eaedee 0%, #eaedee 50%, #eaedee 50%, white 50%, white 100%);
+
+        .row {
+          background: $white;
+        }
+
+        .column {
+          padding-bottom: 0;
+        }
+
+        .grid .column:nth-child(odd) .thumbnail {
+          position: relative;
+          padding-bottom: 90px;
+
+          &:before {
+            content: '';
+            display: block;
+            width: calc(50% + 30px);
+            height: 100%;
+            background: #eaedee;
+            position: absolute;
+            top: 0;
+            left: -30px;
+          }
+
+          img {
+            position: relative;
+            z-index: 2;
+          }
+        }
+      }
+    }
+
+  }
+
+  .section-sub-pages {
+
+    background-image: url(assets/images/backgrounds/blue.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin-bottom: 0;
+
+    .wrap {
+      padding: 75px 0;
+
+      .entry-content * {
+        color: #fff;
+      }
+    }
+
+    .grid .column {
+      padding-bottom: 60px;
+
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+
+  }
+
+}

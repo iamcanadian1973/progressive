@@ -1,0 +1,180 @@
+// Typography
+
+/* Typography resets */
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; 
+}
+
+body {
+	font-family: $paragraph-font-family;
+	font-style: $paragraph-font-style;
+	font-weight: $paragraph-font-weight;
+	font-size: $paragraph-font-size;  
+	color: $paragraph-font-color;
+	-webkit-font-smoothing: antialiased;
+}
+
+hr {
+	height: 1px;
+	background: #cecece;
+	border: none;
+	margin-bottom: 22px;	
+}
+
+
+a {
+	text-decoration: none;
+}
+
+p.no-margin {
+	margin-bottom: 0!important;	
+}
+
+// Links
+a {
+ 	outline: none!important;	
+	
+	transition: background 200ms linear, color 200ms linear;
+	
+	&:focus {
+		outline: none!important;	
+	}
+
+	&:visited {
+		//color: inherit;
+	} // &:visited
+
+} // a
+
+
+
+a[href^="tel"]:link,
+a[href^="tel"]:visited, 
+a[href^="tel"]:hover {
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+}
+
+.mobile {
+    a[href^="tel"]:link,
+    a[href^="tel"]:visited,
+    a[href^="tel"]:hover {
+        text-decoration: underline;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+}
+
+
+strong {
+	font-weight: 700;	
+}
+		
+/* Headings
+--------------------------------------------- */	
+		
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $header-color;
+	font-family: $header-font-family;
+	text-transform: uppercase;
+ 	
+	a {
+		color: $anchor-color;	
+	}	
+}
+
+h1 {
+	span {
+		//display: block;	
+	}
+	
+	strong {
+		color: $yellow!important;
+		font-weight: 800;	
+	}
+}
+
+h2,h4 {
+	@media #{$large-up} {
+    	span {
+			display: block;	
+		}
+	}	
+}
+
+// Heading Line Heights
+
+h1, 
+.h1 {
+	font-weight: 800;
+	line-height: .95;
+ 	margin-bottom: 34px;
+	text-transform: uppercase;
+}
+
+h2,
+.h2 {
+ 	text-transform: uppercase;
+}
+
+h3,
+.h3 {
+	
+}
+
+
+.entry-content {
+
+	
+	h2 {
+		@extend h4;
+		color: $yellow;
+		font-weight: 700;
+		margin-bottom: 10px;	
+	}
+	
+	a {
+		color: $anchor-color;
+		text-decoration: none;
+		text-decoration: underline;
+			
+		&:hover {
+			color: $anchor-color-hover;
+			text-decoration: none;
+		}
+	}
+	
+	p, li {
+		color: $paragraph-font-color;
+		line-height: $paragraph-line-height;
+	}
+	
+	p, ul {
+		margin-bottom: $paragraph-margin-bottom;	
+	}
+	
+	ul:not([class]),
+	ol:not([class]) {
+		
+		margin-left: 30px;
+		list-style-position: outside;
+		
+		li:not([class]) {
+			padding: 0 0 5px 0;
+			margin-bottom: 0;
+		}
+	}
+	
+		
+	ol li {
+		list-style-type: decimal;
+	}
+	
+}

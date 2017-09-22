@@ -1,0 +1,153 @@
+//  Settings (includes overrides for sass/foundation/settings.scss)
+//  -----------------------------
+//
+//  Table of Contents:
+//
+//   1. Global
+//   2. Breakpoints
+//   3. The Grid
+//   4. Base Typography
+//   5. Off Canvas Menu
+
+
+// 1. Global
+// ---------
+
+$global-font-size: 100%;
+$global-width: 1400px;
+$global-lineheight: 1.4;
+
+// Default 
+$light-gray: #e6e6e6;
+$gray: #666666;
+$dark-gray: #424142;
+$black: #333333;
+$white: #ffffff;
+
+// Theme
+
+$yellow: #f5c82f;
+
+// Blue
+$primary: #424142; // backgrounds
+ 
+$body-background: #424142;
+$body-font-color: $white;
+$body-font-family: 'Open Sans', sans-serif;
+
+$global-margin: 30px;
+$global-padding: 10px;
+$global-weight-normal: normal;
+$global-weight-bold: 700;
+$global-radius: 0;
+$global-text-direction: ltr;
+
+
+// 2. Breakpoints
+// --------------
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 980px,
+  xlarge: 1024px,
+  xxlarge: 1200px,
+  xxxlarge: 1440px
+);
+// must match $breakpoints
+$breakpoint-classes: (small medium large xlarge xxlarge xxxlarge);
+
+
+// 3. The Grid
+// -----------
+
+$grid-row-width: $global-width;
+$grid-column-count: 12; // usually 12
+$grid-column-gutter: (
+  small: 30px,
+  medium: 60px
+);
+$grid-column-align-edge: true;
+$block-grid-max: 8;
+
+
+// 4. Base Typography
+// ---------
+
+$header-font-family: 'Open Sans', sans-serif;
+$header-font-weight: $global-weight-bold;
+$header-font-style: normal;
+
+/// Styles for headings at various screen sizes. Each key is a breakpoint, and each value is a map of heading styles.
+/// @type Map
+$header-styles: (
+  small: (
+    'h1': ('font-size': 36),
+    'h2': ('font-size': 24),
+    'h3': ('font-size': 20),
+    'h4': ('font-size': 16),
+    'h5': ('font-size': 16),
+    'h6': ('font-size': 16),
+  ),
+  medium: (
+    'h1': ('font-size': 72),
+    'h2': ('font-size': 48),
+    'h3': ('font-size': 26),
+    'h4': ('font-size': 20),
+    'h5': ('font-size': 20),
+    'h6': ('font-size': 16),
+  ),
+) !default;
+
+$header-color: $white;
+$header-lineheight: 1.2;
+$header-margin-bottom: 30px;
+$small-font-size: 80%;
+$header-small-font-color: $white;
+
+$paragraph-font-family: $body-font-family;
+$paragraph-font-style: normal;
+$paragraph-font-weight: 400;
+$paragraph-font-size: 15px;
+$paragraph-line-height: 1.4;
+$paragraph-font-color: $white;
+$paragraph-margin-bottom: 30px;
+
+$anchor-color: $yellow;
+$anchor-color-hover: scale-color($yellow, $lightness: 10%);
+
+
+//   5. Off Canvas Menu
+
+/// Width of a left/right off-canvas panel.
+$offcanvas-size: 260px;
+
+/// Height of a top/bottom off-canvas panel.
+$offcanvas-vertical-size: 250px !default;
+
+/// Background color of an off-canvas panel.
+$offcanvas-background: $white !default;
+
+/// Box shadow for the off-canvas panel.
+$offcanvas-shadow: none;
+
+/// Z-index of an off-canvas panel with the `push` transition.
+$offcanvas-push-zindex: 1 !default;
+
+/// Z-index of an off-canvas panel with the `overlap` transition.
+$offcanvas-overlap-zindex: 10 !default;
+
+/// Z-index of an off-canvas panel using the `reveal-for-*` classes or mixin.
+$offcanvas-reveal-zindex: 1 !default;
+
+/// Length of the animation on an off-canvas panel.
+$offcanvas-transition-length: 0.2s;
+
+/// Timing function of the animation on an off-canvas panel.
+$offcanvas-transition-timing: ease !default;
+
+/// If `true`, a revealed off-canvas will be fixed-position, and scroll with the screen.
+$offcanvas-fixed-reveal: true !default;
+
+/// Background color for the overlay that appears when an off-canvas panel is open.
+$offcanvas-exit-background: transparent;

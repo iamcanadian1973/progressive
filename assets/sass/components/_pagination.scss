@@ -1,0 +1,66 @@
+/* Pagination
+--------------------------------------------- */
+
+.posts-navigation li {
+	
+}
+
+.archive-pagination,
+.entry-pagination {
+	 margin: 60px auto 0;
+	 @extend .clearfix;	
+	
+	
+	ul {
+		
+	}
+	 
+	 li {
+		list-style-type: none;	 
+		display: inline-block;
+		
+		a {
+			&:hover {
+			
+			}
+		}
+		
+		&.active a {
+			
+		}
+	 }	 	 	
+}
+
+.archive-pagination {
+
+	.pagination-previous, .pagination-next {
+		display: none;
+			 
+	 }
+	
+}
+
+.archive-pagination li:first-child {
+	@media #{$large-up} {
+    	&:before {
+			content: 'MORE NEWS';
+			color: $red;
+			padding-right: 20px;
+			font-size: 18px;	
+		}
+	}	
+}
+
+
+
+.entry-pagination {
+
+	.alignleft {
+		float: left;
+	}
+	
+	.alignright {
+		float: right;
+	}
+	
+}

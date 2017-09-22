@@ -1,0 +1,79 @@
+//
+// Gravity Forms
+//  --------------------------------------------------
+
+.gform_wrapper {
+	max-width: 100%!important;
+	
+	textarea, select, input,  {
+		border: 2px solid rgb(238,238,238);	
+	}
+}
+
+body img.gform_ajax_spinner {
+   display: none!important;
+}
+
+.gform_wrapper .gform_heading,
+ span.gform_description { 
+	margin-bottom: 0!important;
+}
+
+
+.gform_wrapper .top_label .gfield_label {
+    font-size: 16px!important;
+	text-transform: uppercase;
+}
+
+
+.gform_footer {
+	
+	padding-top: 0!important;
+	
+	.gform_button {
+		font-size: 14px!important;	
+	}
+}
+
+// Custom error handling
+
+.validation_error, .validation_message {
+	//display:none;
+	border: none!important;
+	//color: #FFDFE0!important;
+	text-align: left!important;
+	padding: 0!important;
+	font-weight: 400!important;
+}
+
+.top_label .gfield_error {
+	width: auto!important;
+}
+
+.top_label .gfield_error .ginput_container {
+	max-width: 100%;
+}
+
+li.gfield.gfield_error, li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+	background-color: transparent!important;
+	margin-bottom: 0!important;
+	padding: 0;
+	border: none!important;
+}
+
+li.gfield.gfield_error input {
+	background-color: #FFDFE0!important;
+		
+}
+
+li.gfield.gfield_error {
+	@include placeholder {
+		color: #790000;
+	}
+}
+
+
+.gform_wrapper ul.gfield_radio li input[type="radio"]:checked+label, 
+.gform_wrapper ul.gfield_checkbox li input[type="checkbox"]:checked+label {
+	font-weight: normal!important;
+}

@@ -1,0 +1,75 @@
+// Page Light
+
+.template-page-light {
+	
+	background-color: #fff;
+ 	background-image: url( assets/images/gp.png);
+ 	background-repeat: repeat;
+	background-position: left top;	
+	color: #424142;
+	
+	.site-header {
+		background: rgba($white, .75);		
+	}
+	
+	&.left-bar:before {
+		background: $black;	
+	}
+	
+	.nav-primary {
+		
+		.menu > .menu-item 	> a {
+			color: $black;
+		}
+		
+	}
+	
+	.menu-toggle {
+		color: $black;
+	
+		&:visited {
+			color: $black;
+		}
+		
+		.hamburger {
+			
+			span {
+				background: $black;
+								
+				&:nth-child(3) {
+				  background: transparent;
+				}
+			}
+		}
+		
+		&[aria-expanded="true"] {
+			.hamburger span {
+				
+				&:nth-child(3) {
+				  background: $black;
+				}
+			}
+		}
+		
+	}
+	
+	
+	.entry-header {
+		
+		h1 {
+			color: $black;	
+		}
+		
+		h4 {
+			color: $yellow;
+			font-weight: normal;
+			margin-bottom: 55px;	
+		}
+	}
+	
+	.entry-content * {
+		color: $black;
+	}
+	
+	
+}
